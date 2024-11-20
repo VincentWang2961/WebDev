@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello!</title>
+        <link rel="stylesheet" href="variables.css">
+        <style>
+            @media (min-width: 600px) {
+                body {
+                    background-color: aquamarine;
+                }
+            }
+
+            @media (max-width: 599px) {
+                body {
+                    background-color: antiquewhite;
+                }
+            }
+
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #container div {
+                background-color: brown;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+
+            #grid {
+                background-color: green;
+                display: grid;
+                padding: 20px;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                grid-template-columns: 200px 200px auto;
+            }
+
+            #grid div {
+                background-color: aliceblue;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to my web page!</h1>
+        <div id="container">
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+            <div>This is some sample text inside of div, and it is super long!!!!!</div>
+        </div>
+        <div id="grid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <ol>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <div class="success">
+            Success
+        </div>
+        <div class="fail">
+            Fail
+        </div>
+    </body>
+</html>
