@@ -21,8 +21,8 @@
                     .then(response => response.json())
                     //.then(data => console.log(data))
                     .then(data => {
-                        let base = document.querySelector('#base').value;
-                        const currency = document.querySelector('#currency').value;
+                        let base = document.querySelector('#base').value.toUpperCase();
+                        const currency = document.querySelector('#currency').value.toUpperCase();
                         let baserate = data.rates[base];
                         const rate = data.rates[currency];
                         if (baserate == undefined) {
@@ -34,6 +34,9 @@
                         } else {
                             document.querySelector('#result').innerHTML = `Invalid currency.`;
                         }
+                    })
+                    .catch(error => {
+                        console.log('Error:', error);
                     });
                     return false;
                 }
