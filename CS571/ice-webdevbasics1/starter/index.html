@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cs571api.cs.wisc.edu/tools/f24/badgerguard/badgerguard.js" defer></script>
+		<script src="index.js" defer></script>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<img src="./chili.png" width="400" height="400"/>
+		<h1>Easy Chili Recipe</h1>
+		<p>by OpenAI</p>
+		<table style="border: 1px solid;">
+			<thead>
+				<tr>
+					<th>Amount</th>
+					<th>Unit</th>
+					<th>Misc</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="important">
+					<td>1</td>
+					<td>lb</td>
+					<td>ground beef</td>
+				</tr>
+				<tr class="important">
+					<td>15</td>
+					<td>oz</td>
+					<td>kidney beans (drained and rinsed)</td>
+				</tr>
+				<tr>
+					<td>14.5</td>
+					<td>oz</td>
+					<td>diced tomatoes (with juice)</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>tablespoon</td>
+					<td>chili powder</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td></td>
+					<td>onion (diced)</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td></td>
+					<td>bell pepper (diced)</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>teaspoon</td>
+					<td>ground cumin</td>
+				</tr>
+			</tbody>
+		</table>
+		<label for="num-servings">Number of Servings</label>
+		<select id="num-servings">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+		</select>
+		<h2>Instructions</h2>
+		<ol>
+			<li>Cook</li>
+			<li>Simmer</li>
+		</ol>
+		<button>Display Review</button>
+	</body>
+</html>
