@@ -78,7 +78,7 @@ function handleSearch(e) {
 
 	// TODO Implement the search
 	console.log("Searching for students...");
-	// Get the search values
+	// Get the search values and make it to lowercase
 	nameSearch = document.getElementById("search-name").value.toLowerCase();
 	majorSearch = document.getElementById("search-major").value.toLowerCase();
 	interestSearch = document.getElementById("search-interest").value.toLowerCase();
