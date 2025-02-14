@@ -32,12 +32,9 @@ const TicketBoard = (props) => {
     return <div>
         <h1>Ticket Board</h1>
         <Container fluid>
-            {
-                /* TODO: Display the ticket lanes! */
-                ticketLanes.todo.map(t =>
-                    <TicketLane {...t} key={t.id}/>
-                )
-            }
+            <TicketLane status={"todo"} tickets={ticketLanes["todo"]} />
+            <TicketLane status={"inprogress"} tickets={ticketLanes["inprogress"]} />
+            <TicketLane status={"done"} tickets={ticketLanes["done"]} />
         </Container>
     </div>
 }

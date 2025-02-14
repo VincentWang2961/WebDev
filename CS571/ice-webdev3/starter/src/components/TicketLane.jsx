@@ -1,13 +1,13 @@
-import { Row } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import Ticket from "./Ticket";
 
 const TicketLane = (props) => {
 
     return <div>
+        <h2>{props.status}</h2>
         <Row>
             {
-                /* TODO Display each of the tickets! */
-                <Ticket {...props}/>
+                props.tickets.map(tix => <Ticket key={tix.id} {...tix} />)
             }
         </Row>
         <br />
