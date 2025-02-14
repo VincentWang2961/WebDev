@@ -32,9 +32,9 @@ const TicketBoard = (props) => {
     return <div>
         <h1>Ticket Board</h1>
         <Container fluid>
-            <TicketLane status={"todo"} tickets={ticketLanes["todo"]} />
-            <TicketLane status={"inprogress"} tickets={ticketLanes["inprogress"]} />
-            <TicketLane status={"done"} tickets={ticketLanes["done"]} />
+            <TicketLane status={"TODO"} tickets={ticketLanes["todo"]} />
+            <TicketLane status={"INPROGRESS"} tickets={ticketLanes["inprogress"]} />
+            <TicketLane status={"DONE"} tickets={ticketLanes["done"]} />
         </Container>
     </div>
 }

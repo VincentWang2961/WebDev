@@ -3,15 +3,15 @@ import { Button, Card } from "react-bootstrap";
 const Ticket = (props) => {
 
     const markTodo = () => {
-        alert(props.name + " should move to todo!")
+        props.move(props.id, props.status, "todo");
     }
 
     const markInProgress = () => {
-        alert(props.name +  " should move to inprogress!")
+        props.move(props.id, props.status, "inprogress");
     }
 
     const markDone = () => {
-        alert(props.name + " should move to done!")
+        props.move(props.id, props.status, "done");
     }
 
     return <Card style={{margin: "0.25rem"}}>

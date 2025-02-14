@@ -12,7 +12,7 @@ const TicketBoard = (props) => {
     })
 
     useEffect(() => {
-        fetch('https://cs571api.cs.wisc.edu/rest/f24/ice/tickets', {
+        fetch('https://cs571.org/rest/f24/ice/tickets', {
             headers: {
                 "X-CS571-ID": CS571.getBadgerId()
             }
@@ -28,12 +28,37 @@ const TicketBoard = (props) => {
         })
     }, []);
 
+    const moveItem = (id, from, to) => {
+        // Move from one lane to another
+        alert(`I should move ${id} from ${from} to ${to}`);
+        
+        if(from === to) {
+            return;
+        }
+
+        setTicketLanes(oldLines => {
+            const fromLane = oldLines[from];
+            const toLine = oldLines[to];
+            const ticketObj = fromLane.filter(t => t.id === id)[0];
+            
+            const newFromLine = fromLane.filter(t => t.id !== id);
+            const newToLine = [...toLine, ticketObj];
+
+            const newLines = {...oldLines};
+            newLines[from] = newFromLine;
+            newLines[to] = newToLine;
+
+            return newLines;
+        })
+    }
+
     return <div>
         <h1>Ticket Board</h1>
         <Container fluid>
             {
                 Object.keys(ticketLanes).map(laneName => {
                     return <TicketLane
+                        moveItem={moveItem}
                         key={laneName}
                         status={laneName}
                         tickets={ticketLanes[laneName]}

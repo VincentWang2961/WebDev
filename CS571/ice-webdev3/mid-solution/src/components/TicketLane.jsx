@@ -17,6 +17,7 @@ const TicketLane = (props) => {
                     >
                         <Ticket 
                             {...tick}
+                            move={props.moveItem}
                             status={props.status}
                         />
                     </Col>
