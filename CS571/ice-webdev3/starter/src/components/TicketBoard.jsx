@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 
 import TicketLane from './TicketLane'
 
@@ -12,7 +12,7 @@ const TicketBoard = (props) => {
     })
 
     useEffect(() => {
-        fetch('https://cs571api.cs.wisc.edu/rest/f24/ice/tickets', {
+        fetch('https://cs571.org/rest/f24/ice/tickets', {
             headers: {
                 "X-CS571-ID": CS571.getBadgerId()
             }
@@ -21,7 +21,8 @@ const TicketBoard = (props) => {
         .then(ticketData => {
             console.log(ticketData);
             setTicketLanes({
-                todo: [], // TODO Put the tickets in the the todo lane!
+                // TODO Put the tickets in the the todo lane!
+                todo: ticketData, 
                 inprogress: [],
                 done: []
             });
@@ -33,6 +34,9 @@ const TicketBoard = (props) => {
         <Container fluid>
             {
                 /* TODO: Display the ticket lanes! */
+                ticketLanes.todo.map(t =>
+                    <TicketLane {...t} key={t.id}/>
+                )
             }
         </Container>
     </div>
