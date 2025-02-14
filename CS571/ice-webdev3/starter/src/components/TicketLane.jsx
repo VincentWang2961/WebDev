@@ -7,7 +7,9 @@ const TicketLane = (props) => {
         <h2>{props.status}</h2>
         <Row>
             {
-                props.tickets.map(tix => <Ticket key={tix.id} {...tix} />)
+                props.tickets.map(tix => <Col xs={12} md={6} lg={4} key={tix.id}>
+                    <Ticket {...tix} />
+                </Col>)
             }
         </Row>
         <br />
