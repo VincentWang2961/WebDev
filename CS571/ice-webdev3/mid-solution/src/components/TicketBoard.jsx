@@ -36,6 +36,7 @@ const TicketBoard = (props) => {
             return;
         }
 
+        // To set the ticket lines, need to manipuate a duplicated ticketline and return it
         setTicketLanes(oldLines => {
             const fromLane = oldLines[from];
             const toLine = oldLines[to];
