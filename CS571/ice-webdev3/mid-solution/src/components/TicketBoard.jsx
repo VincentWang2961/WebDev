@@ -30,7 +30,7 @@ const TicketBoard = (props) => {
 
     const moveItem = (id, from, to) => {
         // Move from one lane to another
-        alert(`I should move ${id} from ${from} to ${to}`);
+        //alert(`I should move ${id} from ${from} to ${to}`);
         
         if(from === to) {
             return;
