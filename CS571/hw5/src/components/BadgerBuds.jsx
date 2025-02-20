@@ -9,7 +9,7 @@ export default function BadgerBuds() {
     const [buds, setBuds] = useState([]);
 
     useEffect(() => {
-        fetch('https://cs571api.cs.wisc.edu/rest/f24/hw5/buds', {
+        fetch('https://cs571.org/rest/f24/hw5/buds', {
             headers: {
                 "X-CS571-ID": CS571.getBadgerId()
             }
